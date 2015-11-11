@@ -1,9 +1,8 @@
 
-Postgres on Debian:
+Postgres on Debian (as root)
 
-
-    # install
-    apt-get install postgresql postgresql-client
+    # install as root
+    apt-get install --no-install-recommends postgresql postgresql-client
 
 
 Setting up postgres (as root)
@@ -11,13 +10,19 @@ Setting up postgres (as root)
     # become postgres user
     su postgres
     # spawn postgres admin shell
-    psql
+    psql 
 
 You'll get a prompt, enter the following:
 
-    CREATE ROLE srnduser WITH LOGIN PASSWORD 'srndpassword';
-    CREATE DATABASE srnd WITH ENCODING 'UTF8' OWNER srnduser;
+    CREATE ROLE srnd WITH LOGIN PASSWORD 'srnd';
+    CREATE DATABASE srnd WITH ENCODING 'UTF8' OWNER srnd;
     \q
 
-Change the username and password as desired.
+For demo purposes we'll use these credentials.
+These are default values, please change them later.
 
+## important
+
+these credentials assume you are going to run using a user called `srnd`, if your username you plan to run the daemon as is different please change `srnd` to your username.
+
+Now run it, [next](running.md)

@@ -1,9 +1,3 @@
-.thread {
-    margin-bottom: 1em;
-    display: inline-block;
-    word-wrap: break-word;
-    width: 100%;
-}
 
 .frontend , .subject {
     color: #928BFF;
@@ -43,12 +37,25 @@ textarea {
     padding: 10px 10px;
 }
 
-pre > p {
-    display: block-inline;
+pre {
+	white-space: pre-wrap;
+    background: #3f3f3f;
+    color: #d17600;
+    display: inline-block;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
 }
 
-.reply, th, .ukko_thread_header {
+td {
+	background-color: dimgrey;
+}
+
+.reply, .ukko_thread_header {
     background: #202331;
+}
+
+legend {
+	/* background-color: #525252; */
 }
 
 tr {
@@ -68,7 +75,7 @@ a:hover , a:visited:hover {
 }
 
 a {
-    color: #4A4AFF;
+    color: #0C2FF3;
 }
 
 a:visited {
@@ -103,13 +110,10 @@ a:visited {
 }
 
 th {
+	background: #4DA6BD;
     font-size: 10pt;
     padding-left: 10px;
     padding-right: 15px;
-}
-
-#captcha_img {
-    background: #d3d3d3;
 }
 
 input, textarea {
@@ -121,7 +125,7 @@ input, textarea {
 
 html {
     color: #ededed;
-    background: #262230;
+    background: black;
     height: 100%;
     font-family: arial,helvetica,sans-serif;
     font-size: 10pt;
@@ -179,7 +183,7 @@ html {
 
 
 .memearrows {
-    color: green;
+    color: #29D029;
 }
 
 .redtext {
@@ -223,18 +227,12 @@ html {
     box-shadow: 1px 1px 3px black;                    
 }
 
-.post_body > pre {
-    background: #3f3f3f;
-    color: #d17600;
-}
-
 .post_body > p {
     margin: 0px 0px;
 }
 
 .post_body {
     display: inline;
-    width: inherit;
 }
 
 .post {
@@ -249,5 +247,68 @@ html {
 }
 
 #captcha_img {
-    background: grey;
+    background: #4DA6BD;
+}
+
+figure {
+    float: left;
+    margin: 1ex;
+}
+figure img {
+    max-width:256px;
+    max-height:128px;
+    max-width:100%;
+}
+fieldset {
+    overflow: auto;
+	border-radius: 5px 0px 5px 0px;
+}
+
+fieldset > img {
+	float: right;
+}
+
+.thread {
+    float: left;
+	width: 90%;
+	padding-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #252525;
+}
+
+.replybar {
+    float: left;
+    position: fixed;
+    top: 2ex;
+    right: 0;
+    width: 34%
+    }
+@media (max-width: 100ex) {
+    .replybar, .thread {
+		width: 100%;
+		position: static;
+    }
+}
+
+.hide-reply:checked ~ div {
+    width: 100%;
+    position: static;
+}
+
+textarea#reply-text {
+    width: 100%;
+    resize: vertical;
+}
+
+.hide-reply {
+    float: right;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+
+hr {
+	padding-bottom: 20px;
 }

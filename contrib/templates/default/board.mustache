@@ -14,7 +14,9 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="{{board.Prefix}}static/site.css"></link>
+    <meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" href="{{board.Prefix}}static/site.css" />
+    <link rel="stylesheet" href="{{board.Prefix}}static/user.css" />
     <script type="text/javascript" src="{{board.Prefix}}static/nntpchan.js"></script>
     <title>{{board.Board}}</title>
   </head>
@@ -39,8 +41,6 @@
             <br />
           {{/Truncate.Replies}}
         </div>
-        <br/>
-        <hr/>
       {{/board.Threads}}
     </div>
   </body>
