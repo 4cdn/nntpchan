@@ -321,3 +321,10 @@ textarea#reply-text {
 hr {
 	padding-bottom: 20px;
 }
+
+.messageroot {
+    background: green;
+    width: 94.9%;
+    position: relative;
+    left: 5%;
+}
