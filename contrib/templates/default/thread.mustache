@@ -34,7 +34,9 @@
     <div class="thread" id="thread_{{thread.OP.PostHash}}">
       <div class="thread_header">
       </div>
-      {{{thread.OP.RenderPost}}}
+      <div class="messageroot">
+       {{{thread.OP.RenderPost}}}
+      </div>
       {{# thread.Replies}}
         {{{RenderPost}}}
         <br/>
