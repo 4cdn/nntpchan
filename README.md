@@ -1,3 +1,5 @@
+![alt text](https://i.imgur.com/nJeVjbK.png)
+
 # NNTPChan #
 
 NNTPChan (previously known as overchan) is a decentralized imageboard that uses nntp to synchronize content between many different servers. It utilizes cryptographically signed posts to perform optional/opt-in decentralized moderation.
